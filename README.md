@@ -1,2 +1,3 @@
-# portfolio
-A portfolio in React that is responsive adjusts to different screen sizes, providing optimal viewing experiences for users on desktop, tablet, and mobile devices. The React components used in the portfolio are designed to flex and resize according to the width of the screen, ensuring that text, images, and other content is displayed correctly.
+# Portfolio
+
+Analytical Data Analyst and aspiring Data Scientist with a strong foundation in Python, SQL, and data visualization, currently pursuing a Master’s in Management & Data Science in Germany. This portfolio showcases my projects in data analytics, machine learning, and full-stack development, highlighting my ability to transform complex data into actionable insights through clean pipelines, interactive dashboards, and scalable applications.
