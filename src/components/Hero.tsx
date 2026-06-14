@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, FileText, Send, Github, Linkedin } from "lucide-react";
+import { ArrowDown, FileText, Send, Github, Linkedin, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { personalInfo } from "@/data/portfolioData";
 
@@ -99,6 +99,15 @@ const Hero = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin size={24} />
+            </a>
+            <a
+              href={personalInfo.researchgate}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ResearchGate"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <BookOpen size={24} />
             </a>
           </motion.div>
         </div>

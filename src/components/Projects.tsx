@@ -48,12 +48,18 @@ const Projects = () => {
                 <div className="flex items-center gap-2">
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} source`}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Github size={20} />
                   </a>
                   <a
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} link`}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <ExternalLink size={20} />

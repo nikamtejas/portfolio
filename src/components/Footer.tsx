@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 const Footer = () => {
@@ -20,6 +20,7 @@ const Footer = () => {
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Github size={20} />
@@ -28,12 +29,23 @@ const Footer = () => {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin size={20} />
             </a>
             <a
+              href={personalInfo.researchgate}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ResearchGate"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <BookOpen size={20} />
+            </a>
+            <a
               href={`mailto:${personalInfo.email}`}
+              aria-label="Email"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail size={20} />

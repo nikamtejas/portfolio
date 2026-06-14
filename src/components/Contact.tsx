@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,24 +9,50 @@ import { personalInfo } from "@/data/portfolioData";
 
 const Contact = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formRef.current) return;
+
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Posts directly to FormSubmit (no key/signup). The AJAX endpoint keeps
+      // the visitor on the page — no redirect — and emails the message to you.
+      const payload = Object.fromEntries(new FormData(formRef.current).entries());
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${personalInfo.email}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+      if (!response.ok) throw new Error("Request failed");
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      formRef.current.reset();
+    } catch (error) {
+      toast({
+        title: "Couldn't send message",
+        description: "Something went wrong. Please try again or email me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -54,6 +80,11 @@ const Contact = () => {
       icon: Github,
       label: "GitHub",
       href: personalInfo.github,
+    },
+    {
+      icon: BookOpen,
+      label: "ResearchGate",
+      href: personalInfo.researchgate,
     },
   ];
 
@@ -116,6 +147,7 @@ const Contact = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={link.label}
                     className="p-4 rounded-xl card-gradient border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all"
                   >
                     <link.icon size={24} />
@@ -126,12 +158,27 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
+            ref={formRef}
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
             onSubmit={handleSubmit}
             className="space-y-6 p-6 rounded-xl card-gradient border border-border"
           >
+            {/* FormSubmit control fields */}
+            <input type="hidden" name="_subject" value="New message from your portfolio" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            {/* Honeypot: bots fill this in, real users never see it */}
+            <input
+              type="text"
+              name="_honey"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+              aria-hidden="true"
+            />
+
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-foreground">

@@ -6,61 +6,73 @@ export const personalInfo = {
   email: "tejasshivajinikam@gmail.com",
   linkedin: "https://www.linkedin.com/in/tejxs/",
   github: "https://github.com/nikamtejas",
+  researchgate: "https://www.researchgate.net/profile/Tejas-Nikam-3",
 };
 
 export const skills = {
   "Programming & Tools": [
-    "Python", "JavaScript", "TypeScript", "SQL", "R", "Git", "VS Code", "Jupyter"
+    "Python", "JavaScript", "Java", "SQL", "Git", "Docker", "Postman", "VS Code"
   ],
   "Data & Analytics": [
-    "Power BI", "Tableau", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow"
+    "Power BI", "Tableau", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "Jupyter", "Machine Learning"
   ],
   "Databases & Platforms": [
-    "PostgreSQL", "MongoDB", "MySQL", "AWS", "Azure", "Snowflake", "BigQuery"
+    "MongoDB", "MySQL", "Node.js", "Express.js", "React"
   ],
   "Methodologies": [
-    "ETL/ELT", "Data Modeling", "Statistical Analysis", "Machine Learning", "Agile/Scrum", "REST APIs"
+    "ETL", "Data Visualization", "REST APIs", "Agile/Scrum", "OOP", "API Design"
   ],
 };
 
 export const experiences = [
   {
     id: 1,
-    role: "Junior Data Analyst",
+    role: "Data Analyst",
     company: "TDM Infotech",
-    period: "02/2024 - 03/2025",
-    location: "Remote",
+    period: "07/2024 - 12/2024",
+    location: "Pune, India",
     highlights: [
-      "Automated dashboard reporting, reducing manual effort by 60% and enabling real-time stakeholder insights",
-      "Developed ETL pipelines processing 500K+ records daily with 99.9% accuracy",
-      "Created interactive Power BI dashboards for C-level executives, driving data-driven decisions",
-      "Collaborated with cross-functional teams to define KPIs and implement analytics solutions",
+      "Used Python (Pandas, NumPy, Matplotlib) for data cleaning, transformation, and analysis on large datasets",
+      "Built and maintained ETL workflows to extract, transform, and load data from relational databases into reporting-ready formats",
+      "Built interactive Power BI dashboards to visualize insights and support data-driven decisions",
+      "Applied SQL for efficient data extraction and manipulation from relational databases",
+      "Collaborated with teams to develop automated reports and enhance workflow efficiency",
     ],
   },
   {
     id: 2,
-    role: "Backend Developer Intern",
-    company: "Iquid",
-    period: "07/2023 - 09/2023",
-    location: "India",
+    role: "Full Stack Developer",
+    company: "Freelance — GuruDresses",
+    period: "10/2023 - 11/2023",
+    location: "Kolhapur, India",
     highlights: [
-      "Built scalable RESTful APIs using Node.js and Express, serving 10K+ daily requests",
-      "Implemented authentication systems and database optimization with MongoDB",
-      "Contributed to MERN stack applications with focus on performance and security",
-      "Participated in agile sprints and code reviews, improving code quality by 25%",
+      "Led the end-to-end software development lifecycle for client GuruDresses using Figma, React, Node.js, Express.js, MongoDB, and Docker",
+      "Designed and implemented a custom voucher system with gift and expiry-date options for business owners",
+      "Built a streamlined voucher distribution flow, enabling one-click sharing via WhatsApp",
     ],
   },
   {
     id: 3,
-    role: "Data Analyst Intern",
-    company: "TDM Infotech",
-    period: "10/2021 - 03/2022",
-    location: "India",
+    role: "Back End Developer",
+    company: "IQUED",
+    period: "06/2023 - 07/2023",
+    location: "Kerala, India",
     highlights: [
-      "Analyzed customer behavior data to identify trends and improve retention by 15%",
-      "Designed Tableau visualizations for marketing campaigns and sales forecasting",
-      "Assisted in building predictive models for inventory management",
-      "Documented data workflows and created training materials for junior analysts",
+      "Developed and tested RESTful APIs using the MERN stack following agile practices",
+      "Optimized MongoDB database design and query performance for scalability",
+      "Built a modular Node.js architecture applying object-oriented principles",
+      "Collaborated in an agile environment through standups and code reviews",
+    ],
+  },
+  {
+    id: 4,
+    role: "Frontend Developer",
+    company: "IBM",
+    period: "01/2023",
+    location: "Pune, India",
+    highlights: [
+      "Built responsive, user-focused web interfaces using HTML, CSS, and JavaScript",
+      "Applied modern frontend practices to deliver clean, accessible, and maintainable UIs",
     ],
   },
 ];
@@ -69,8 +81,8 @@ export const projects = [
   {
     id: 1,
     title: "LifeGuardian",
-    description: "Real-time emergency response application with GPS tracking, automated alerts, and emergency service integration for faster incident response.",
-    tech: ["React Native", "Node.js", "MongoDB", "Socket.io", "Google Maps API"],
+    description: "Real-time emergency response application with live location tracking, automated alerts, and emergency service integration for faster incident response.",
+    tech: ["React", "Node.js", "Express.js", "Socket.IO", "MongoDB"],
     category: "Full-Stack",
     github: "https://github.com/nikamtejas/Lifeguardian_Users.git",
     demo: "https://lifeguardian-users.netlify.app/",
@@ -78,35 +90,35 @@ export const projects = [
   {
     id: 2,
     title: "Rentiverse",
-    description: "Full-stack rental marketplace platform with secure payment processing, user authentication, and real-time messaging between renters and owners.",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Redux"],
+    description: "Full-stack MERN rental marketplace with secure Razorpay payment integration, user authentication, and a fully Dockerized backend for scalable deployment.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Razorpay", "Docker"],
     category: "Full-Stack",
     github: "https://github.com/nikamtejas/Rentiverse.git",
     demo: "https://github.com/nikamtejas/Rentiverse.git",
   },
   {
     id: 3,
-    title: "AI Rural Healthcare Digitization",
-    description: "AI-powered system to digitize and analyze rural healthcare data, improving accessibility and enabling predictive health analytics for underserved communities.",
-    tech: ["Python", "TensorFlow", "FastAPI", "PostgreSQL", "Tableau"],
-    category: "Research",
-    github: "https://www.researchgate.net/publication/398291445_LEVERAGING_AGENTIC_WORKFLOW_AUTOMATION_AND_AI-DRIVEN_FRONTEND_DEVELOPMENT_FOR_COST-EFFECTIVE_RURAL_HEALTHCARE_DIGITIZATION",
-    demo: "https://www.researchgate.net/publication/398291445_LEVERAGING_AGENTIC_WORKFLOW_AUTOMATION_AND_AI-DRIVEN_FRONTEND_DEVELOPMENT_FOR_COST-EFFECTIVE_RURAL_HEALTHCARE_DIGITIZATION",
-  },
-  {
-    id: 4,
-    title: "AI-Enhanced Learning Research",
-    description: "Research project analyzing the impact of AI tools on student learning outcomes using statistical modeling and NLP techniques.",
-    tech: ["Python", "NLP", "SPSS", "Pandas", "Matplotlib"],
+    title: "AI-Powered Learning vs. Gamified Testing",
+    description: "Data-driven research comparing educational engagement between AI-powered learning and gamified testing, using statistical modeling to measure learning improvement.",
+    tech: ["Python", "Pandas", "Matplotlib", "Statistical Analysis", "NLP"],
     category: "Research",
     github: "https://www.researchgate.net/publication/389574610_AI-Powered_Learning_vs_Gamified_Testing_A_Data-Driven_Approach_to_Educational_Improvement",
     demo: "https://www.researchgate.net/publication/389574610_AI-Powered_Learning_vs_Gamified_Testing_A_Data-Driven_Approach_to_Educational_Improvement",
   },
   {
+    id: 4,
+    title: "AI Rural Healthcare Digitization",
+    description: "Research on leveraging agentic workflow automation and AI-driven frontend development for cost-effective digitization of rural healthcare data.",
+    tech: ["Python", "AI Agents", "Workflow Automation", "Data Analysis"],
+    category: "Research",
+    github: "https://www.researchgate.net/publication/398291445_LEVERAGING_AGENTIC_WORKFLOW_AUTOMATION_AND_AI-DRIVEN_FRONTEND_DEVELOPMENT_FOR_COST-EFFECTIVE_RURAL_HEALTHCARE_DIGITIZATION",
+    demo: "https://www.researchgate.net/publication/398291445_LEVERAGING_AGENTIC_WORKFLOW_AUTOMATION_AND_AI-DRIVEN_FRONTEND_DEVELOPMENT_FOR_COST-EFFECTIVE_RURAL_HEALTHCARE_DIGITIZATION",
+  },
+  {
     id: 5,
     title: "Pulse Rate Monitor",
-    description: "IoT-based health monitoring system using Arduino for real-time pulse rate tracking with data visualization dashboard.",
-    tech: ["Arduino", "C++", "Python", "Flask", "Chart.js"],
+    description: "IoT-based health monitoring system using Arduino for real-time pulse rate tracking through microcontroller integration and live data visualization.",
+    tech: ["Arduino", "C++", "IoT", "Sensors", "Data Visualization"],
     category: "IoT",
     github: "https://github.com/nikamtejas/heart-rate-monitoring.git",
     demo: "https://github.com/nikamtejas/heart-rate-monitoring.git",
@@ -128,7 +140,7 @@ export const education = [
     institution: "Shivaji University",
     location: "Kolhapur, India",
     period: "06/2020 - 05/2024",
-    description: "Specialized in software engineering and data structures with distinction.",
+    description: "Specialized in software engineering, data structures, and full-stack development.",
   },
   {
     id: 3,
@@ -136,6 +148,6 @@ export const education = [
     institution: "University of Stuttgart",
     location: "Germany",
     period: "04/2025 - 09/2025",
-    description: "Professional working proficiency in German language.",
+    description: "Intensive language training toward professional working proficiency in German.",
   },
 ];
