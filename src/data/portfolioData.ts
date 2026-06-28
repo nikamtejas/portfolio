@@ -94,7 +94,16 @@ export const projects = [
     tech: ["React", "Node.js", "Express.js", "MongoDB", "Razorpay", "Docker"],
     category: "Full-Stack",
     github: "https://github.com/nikamtejas/Rentiverse.git",
-    demo: "https://github.com/nikamtejas/Rentiverse.git",
+    demo: "https://renti-verse.onrender.com/",
+  },
+  {
+    id: 6,
+    title: "GT Wallcrafts",
+    description: "A multi-role platform for a wall art and painting business that connects professional painters with job opportunities, runs a complete e-commerce store, and gives admins a centralized dashboard to manage orders, bookings, painters, products, and inventory end-to-end.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "E-Commerce", "Admin Dashboard"],
+    category: "Full-Stack",
+    github: "http://gtwallcrafts.com/",
+    demo: "http://gtwallcrafts.com/",
   },
   {
     id: 3,
