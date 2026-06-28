@@ -81,8 +81,8 @@ export const projects = [
   {
     id: 1,
     title: "LifeGuardian",
-    description: "Real-time emergency response application with live location tracking, automated alerts, and emergency service integration for faster incident response.",
-    tech: ["React", "Node.js", "Express.js", "Socket.IO", "MongoDB"],
+    description: "Cross-platform Flutter mobile app for real-time emergency response, featuring live GPS tracking through geolocation APIs, automated alerts, and a Node.js backend that integrates emergency services for faster incident response.",
+    tech: ["Flutter", "Node.js", "Express.js", "Socket.IO", "Geolocation APIs", "MongoDB"],
     category: "Full-Stack",
     github: "https://github.com/nikamtejas/Lifeguardian_Users.git",
     demo: "https://lifeguardian-users.netlify.app/",
